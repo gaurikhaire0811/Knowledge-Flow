@@ -2,7 +2,7 @@
 import express from "express";
 import passport from "passport";
 import User from "../models/user.js";
-import Thread from "../models/Thread.js";
+import Thread from "../models/thread.js";
 import getOpenAIAPIResponse from "../utils/openai.js";
 
 const router = express.Router();
