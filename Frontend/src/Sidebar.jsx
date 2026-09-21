@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { MyContext } from "./MyContext.jsx";
 import { v1 as uuidv1 } from "uuid";
 import { useAuth } from "./auth/AuthContext.jsx";
+import blackLogo from "./assets/blacklogo.png";
 
 function Sidebar() {
 
@@ -178,9 +179,9 @@ function Sidebar() {
             <button onClick={createNewChat}>
 
                 <img
-                    src="src/assets/blacklogo.png"
-                    alt="gpt logo"
-                    className="logo"
+                 src={blackLogo}
+                 alt="gpt logo"
+                 className="logo"
                 />
 
                 <span>
