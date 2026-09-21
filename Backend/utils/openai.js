@@ -1,8 +1,10 @@
 
+
 import "dotenv/config";
 
-const getOpenAIAPIRespnse = async (message) => {
+const getOpenAIAPIResponse = async (message) => {
     try {
+
         const options = {
             method: "POST",
             headers: {
@@ -27,22 +29,26 @@ const getOpenAIAPIRespnse = async (message) => {
 
         const data = await response.json();
 
-        // Check if OpenAI API returned an error
+        console.log("OpenRouter Response:", data);
+
         if (!response.ok) {
-            console.log("OpenRouter API Error:", data);
             throw new Error(
                 data?.error?.message || "OpenRouter API request failed"
             );
         }
 
-        console.log("OpenRouter Response:", data);
+        if (!data?.choices?.[0]?.message?.content) {
+            throw new Error("AI did not return a valid response");
+        }
 
         return data.choices[0].message.content;
 
     } catch (err) {
-        console.log("OpenRouetr Error:", err);
+
+        console.log("OpenRouter Error:", err);
+
         throw err;
     }
 };
 
-export default getOpenAIAPIRespnse;
+export default getOpenAIAPIResponse;
