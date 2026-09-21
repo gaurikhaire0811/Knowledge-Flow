@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
             try {
 
                 const response = await fetch(
-                    "http://localhost:8080/api/profile",
+                    "https://knowledge-flow-hqul.onrender.com/api/profile",
                     {
                         credentials: "include"
                     }
@@ -58,7 +58,7 @@ export function AuthProvider({ children }) {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/logout",
+                "https://knowledge-flow-hqul.onrender.com/api/logout",
                 {
                     method: "GET",
                     credentials: "include"

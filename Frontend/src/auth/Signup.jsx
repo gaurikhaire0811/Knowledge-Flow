@@ -33,7 +33,7 @@ function Signup() {
         try {
 
             const response = await fetch(
-                "http://localhost:8080/api/register",
+                "https://knowledge-flow-hqul.onrender.com/api/register",
                 {
                     method: "POST",
 
