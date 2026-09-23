@@ -15,6 +15,7 @@ The main idea of this project is to provide a simple chat interface where users 
 * AI chat interface
 * New chat / conversation threads
 * Chat history
+* chats deletion
 * User authentication
 * Protected backend routes
 * MongoDB database for storing users and conversations
